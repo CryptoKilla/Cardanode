@@ -10,6 +10,13 @@ echo "|This script is built to deploy Cardano node 1.25.1                       
 echo "|Please remain at your computer to respond to promts in the script as needed.                      |"
 echo "|~*~*~*~**~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*~*~*~*~*~*~|"
 
+echo "."
+sleep 1
+echo ".."
+sleep 1
+echo "..."
+sleep 5
+
 #1. update/upgrade system
 
 echo "Checking your system for updates/upgrades, stand by."
@@ -17,9 +24,11 @@ echo "Checking your system for updates/upgrades, stand by."
 sudo apt update && sudo apt upgrade -y
 
 echo "."
+sleep 3
 echo ".."
+sleep 3
 echo "..."
-sleep 5
+sleep 10
 
 #2. Download and install the required libraries to run the node
 
@@ -29,11 +38,11 @@ sudo apt-get install -y curl python3 build-essential pkg-config libffi-dev libgm
 export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
 
 echo "."
-sleep 1
+sleep 3
 echo ".."
-sleep 1
+sleep 3
 echo "..."
-sleep 5
+sleep 10
 
 #3. Download and instal Cabal 3.2.0.0
 
@@ -61,11 +70,11 @@ cabal --version
 echo "Cabal version should be 3.2.0.0"
 
 echo "."
-sleep 1
+sleep 3
 echo ".."
-sleep 1
+sleep 3
 echo "..."
-sleep 5
+sleep 10
 
 #4. Download and install Glasgow Haskell Compiler 8.10.2
 
@@ -86,11 +95,11 @@ ghc --version
 echo "GHC version should be 8.10.2"
 
 echo "."
-sleep 1
+sleep 3
 echo ".."
-sleep 1
+sleep 3
 echo "..."
-sleep 5
+sleep 10
 
 #5. build the required Libsodium library
 echo "Building the Libsodium Library"
@@ -108,21 +117,21 @@ export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH" >> ~/.bashrc
 source ~/.bashrc
 
 echo "."
-sleep 1
+sleep 3
 echo ".."
-sleep 1
+sleep 3
 echo "..."
-sleep 5
+sleep 10
 
 echo "Your system is now ready to install the Cardano node & relay."
 echo "You can find an automated script like this one that can be used to to configure and deploy the node in the following repository. https://github.com/CryptoKilla/Cardanode"
 
 echo "."
-sleep 1
+sleep 3
 echo ".."
-sleep 1
+sleep 3
 echo "..."
-sleep 5
+sleep 10
 
 echo "If you wish to help support my projects so that I can dedicate more time to coding I accept BTC ADA ETH & XTZ"
 echo "BTC: 14WDzkNAFfJ1XwzAnuUfUDwTTHNvWAfAuV"
@@ -131,8 +140,8 @@ echo "ETH: 0xBfF450302219e89860446964B8Fb4935B670b9E6"
 echo "XTZ: tz2UQWshzjShMa19vrPdpAMLPxucezRzbmku"
 
 echo "."
-sleep 1
+sleep 3
 echo ".."
-sleep 1
+sleep 3
 echo "..."
 sleep 10
