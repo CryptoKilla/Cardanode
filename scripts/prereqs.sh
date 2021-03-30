@@ -67,23 +67,23 @@ sleep 1
 echo "..."
 sleep 5
 
-#4. Download and install Glasgow Haskell Compiler 8.10.3
+#4. Download and install Glasgow Haskell Compiler 8.10.2
 
-echo "Downloading and installing Glasgow Haskell Compiler 8.10.3"
+echo "Downloading and installing Glasgow Haskell Compiler 8.10.2"
 
 mkdir -p ~/src
 cd ~/src
 
-wget https://downloads.haskell.org/ghc/8.10.2/ghc-8.10.3-x86_64-deb9-linux.tar.xz
-tar -xf ghc-8.10.3-x86_64-deb9-linux.tar.xz
-rm ghc-8.10.3x86_64-deb9-linux.tar.xz
-cd ghc-8.10.3
+wget https://downloads.haskell.org/ghc/8.10.2/ghc-8.10.2-x86_64-deb9-linux.tar.xz
+tar -xf ghc-8.10.2-x86_64-deb9-linux.tar.xz
+rm ghc-8.10.2x86_64-deb9-linux.tar.xz
+cd ghc-8.10.2
 ./configure
 sudo make install
 
 ghc --version
 
-echo "GHC version should be 8.10.3"
+echo "GHC version should be 8.10.2"
 
 echo "."
 sleep 1
