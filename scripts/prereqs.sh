@@ -44,39 +44,7 @@ sleep 3
 echo "..."
 sleep 10
 
-#3. Download and instal Cabal 3.2.0.0
-
-echo "Downloading and installing Cabal 3.2.0.0"
-
-mkdir git
-cd git
-
-wget https://downloads.haskell.org/~cabal/cabal-install-3.2.0.0/cabal-install-3.2.0.0-x86_64-unknown-linux.tar.xz
-tar -xf cabal-install-3.2.0.0-x86_64-unknown-linux.tar.xz
-rm cabal-install-3.2.0.0-x86_64-unknown-linux.tar.xz cabal.sig
-
-mkdir -p ~/.local/bin
-mv cabal ~/.local/bin/
-
-export PATH="~/.local/bin:$PATH" >> ~/.bashrc 
-source ~/.bashrc 
-echo $PATH
-
-cd
-
-cabal update
-cabal --version
-
-echo "Cabal version should be 3.2.0.0"
-
-echo "."
-sleep 3
-echo ".."
-sleep 3
-echo "..."
-sleep 10
-
-#4. Download and install Glasgow Haskell Compiler 8.10.2
+#3. Download and install Glasgow Haskell Compiler 8.10.2
 
 echo "Downloading and installing Glasgow Haskell Compiler 8.10.2"
 
@@ -101,7 +69,7 @@ sleep 3
 echo "..."
 sleep 10
 
-#5. build the required Libsodium library
+#4. build the required Libsodium library
 echo "Building the Libsodium Library"
 
 git clone https://github.com/input-output-hk/libsodium
@@ -115,6 +83,38 @@ sudo make install
 export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH" >> ~/.bashrc
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH" >> ~/.bashrc
 source ~/.bashrc
+
+echo "."
+sleep 3
+echo ".."
+sleep 3
+echo "..."
+sleep 10
+
+#5. Download and instal Cabal 3.2.0.0
+
+echo "Downloading and installing Cabal 3.2.0.0"
+
+mkdir git
+cd git
+
+wget https://downloads.haskell.org/~cabal/cabal-install-3.2.0.0/cabal-install-3.2.0.0-x86_64-unknown-linux.tar.xz
+tar -xf cabal-install-3.2.0.0-x86_64-unknown-linux.tar.xz
+rm cabal-install-3.2.0.0-x86_64-unknown-linux.tar.xz cabal.sig
+
+mkdir -p ~/.local/bin
+mv cabal ~/.local/bin/
+
+export PATH="~/.local/bin:$PATH" >> ~/.bashrc 
+source ~/.bashrc 
+echo $PATH
+
+cd
+
+cabal update
+cabal --version
+
+echo "Cabal version should be 3.2.0.0"
 
 echo "."
 sleep 3
