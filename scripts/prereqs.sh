@@ -21,32 +21,7 @@ echo ".."
 echo "..."
 sleep 5
 
-#2. Add super user for Cardano node
-
-echo "Adding user with administrative privileges to manage the Cardano node."
-echo "Enter a password for the new user account, all other info can be blank."
-echo "."
-sleep 1
-echo ".."
-sleep 1
-echo "..."
-sleep 1
-
-sudo adduser cardanode
-sudo usermod -aG sudo cardanode
-sudo su - cardanode
-whoami
-sudo whoami
-
-echo "Verify the responses of whoami & sudo whoami are cardanode & root and that your user has been switched to cardanode"
-echo "."
-sleep 1
-echo ".."
-sleep 1
-echo "..."
-sleep 5
-
-#3. Download and install the required libraries to run the node
+#2. Download and install the required libraries to run the node
 
 echo "Downloading and installing the required libraries..." 
 
@@ -60,9 +35,9 @@ sleep 1
 echo "..."
 sleep 5
 
-#4. Download and instal Cabal 3.2.0.0
+#3. Download and instal Cabal 3.2.0.0
 
-echo" Downloading and installing Cabal 3.2.0.0"
+echo "Downloading and installing Cabal 3.2.0.0"
 
 mkdir git
 cd git
@@ -74,7 +49,7 @@ rm cabal-install-3.2.0.0-x86_64-unknown-linux.tar.xz cabal.sig
 mkdir -p ~/.local/bin
 mv cabal ~/.local/bin/
 
-echo "export PATH=~/.local/bin:$PATH" >> ~/.bashrc 
+export PATH="~/.local/bin:$PATH" >> ~/.bashrc 
 source ~/.bashrc 
 echo $PATH
 
@@ -92,7 +67,7 @@ sleep 1
 echo "..."
 sleep 5
 
-#5. Download and install Glasgow Haskell Compiler 8.10.3
+#4. Download and install Glasgow Haskell Compiler 8.10.3
 
 echo "Downloading and installing Glasgow Haskell Compiler 8.10.3"
 
@@ -117,7 +92,9 @@ sleep 1
 echo "..."
 sleep 5
 
-#7. build the required libsodium library
+#5. build the required Libsodium library
+echo "Building the Libsodium Library"
+
 git clone https://github.com/input-output-hk/libsodium
 cd libsodium
 git checkout 66f017f1
