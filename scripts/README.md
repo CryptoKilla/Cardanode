@@ -13,3 +13,12 @@ sudo whoami
 
 
 The response of whoami and sudo whoami should be cardanode & root respectively.
+
+
+Usage
+
+wget https://raw.githubusercontent.com/CryptoKilla/Cardanode/main/scripts/prereqs.sh
+
+chmod +x prereqs.sh
+
+./prereqs.sh
