@@ -2,7 +2,7 @@
 
 echo " ~*~*~*~**~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*~*~*~*~*~*~"
 echo "|This script will setup a Ubuntu 20.04 server with all the prereqs to run any type of Cardano node.|"
-echo "|It will install all of the required libraries, GHCUp, Cabal & Libsodium.                          |"
+echo "|It will install all of the required libraries, Glasgow Haskell Compiler, Cabal & Libsodium.       |"
 echo "|This script has been tested on Ubuntu 20.04 and should work for any Ubuntu or Debain based system.|"
 echo "|The script comes with no warranty. Please exercise caution and use at your own risk.              |"
 echo "|Be sure to veryify all scripts are up-to-date before using to deploy a Cardano node.              |"
