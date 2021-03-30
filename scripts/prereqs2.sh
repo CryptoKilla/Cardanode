@@ -16,7 +16,7 @@ sleep 5
 
 #4. Download and instal Cabal 3.2.0.0
 
-echo" Downloading and installing Cabal 3.2.0.0"
+echo "Downloading and installing Cabal 3.2.0.0"
 
 mkdir git
 cd git
@@ -28,7 +28,7 @@ rm cabal-install-3.2.0.0-x86_64-unknown-linux.tar.xz cabal.sig
 mkdir -p ~/.local/bin
 mv cabal ~/.local/bin/
 
-echo "export PATH=~/.local/bin:$PATH" >> ~/.bashrc 
+export PATH="~/.local/bin:$PATH" >> ~/.bashrc 
 source ~/.bashrc 
 echo $PATH
 
