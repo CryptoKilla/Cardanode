@@ -1,18 +1,5 @@
 #!/bin/bash
 
-sudo usermod -aG sudo cardanode
-sudo su - cardanode
-whoami
-sudo whoami
-
-echo "Verify the responses of whoami & sudo whoami are cardanode & root and that your user has been switched to cardanode"
-echo "."
-sleep 1
-echo ".."
-sleep 1
-echo "..."
-sleep 5
-
 #3. Download and install the required libraries to run the node
 
 echo "Downloading and installing the required libraries..." 
